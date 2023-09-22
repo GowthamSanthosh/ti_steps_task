@@ -19,8 +19,7 @@ class UserListItem extends StatelessWidget {
         child: Center(
           child: BlocConsumer<InternetBloc,InternetState>( listener:(context,state) {
             if(state is InternetGainedState){
-              ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text('Internet connected!'),
-                backgroundColor: Colors.green,));
+
             }
             else if(state is InternetLostState){
               ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text('Internet not connected!'),
